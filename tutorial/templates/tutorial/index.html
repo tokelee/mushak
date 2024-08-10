@@ -1,0 +1,156 @@
+{% extends "./base.html" %} {% load static %} {% block body %}
+
+<div class="container">
+  <div class="banner">
+    <div class="banner-wrapper">
+      <div class="banner-content">
+        <h3 class="green-text sub-heading">Mushak Tech Ventures</h3>
+        <h2 class="heading white-text">
+          Software Development Training for <br />
+          <span class="green-text">Everyone</span>
+        </h2>
+        <p class="white-text" style="margin-bottom: 40px">
+          Enroll in project-based courses that are designed to be hands-on,
+          straightforward, and easy to follow
+        </p>
+
+        <div class="link-button">
+          <a href="#courses">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+  <div class="notify-me-container">
+    <div class="notify-me-container-wrapper">
+      <h3 class="">NOTIFY ME OF NEW COURSES</h3>
+      <form action="" method="post">
+        <div class="notify-me-input">
+          <input type="email" placeholder="Email" required />
+        </div>
+        <button class="notify-me-btn">NOTIFY ME</button>
+      </form>
+    </div>
+  </div> -->
+
+  <!-- Courses -->
+  <div style="padding: 2em 0" id="courses" class="courses">
+    <h3 style="padding: 1em 0" class="sub-heading center">
+      <span class="green-text">Featured</span> Courses
+    </h3>
+    <!-- New Courses -->
+    <div class="courses-container">
+      <div class="courses-container-wrapper">
+        <div class="each-course">
+          <div class="stack-logo">
+            <div class="stack-logo-wrapper">
+              <img src="{% static 'tutorial/images/front-end3.jpg' %}" alt="" />
+            </div>
+          </div>
+
+          <p style="margin-bottom: 0.6em" class="green-text">ALL LEVELS</p>
+          <h3 style="margin-bottom: 1em">Web Development</h3>
+
+          <a class="green-text" href="/apply">Enroll Now</a>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="each-course">
+          <div class="stack-logo">
+            <div class="stack-logo-wrapper">
+              <img src="{% static 'tutorial/images/datasci.png' %}" alt="" />
+            </div>
+          </div>
+
+          <p style="margin-bottom: 0.6em" class="green-text">BEGINNER</p>
+          <h3 style="margin-bottom: 1em">Data Science</h3>
+
+          <a class="green-text" href="/apply">Enroll Now</a>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="each-course">
+          <div class="stack-logo">
+            <div class="stack-logo-wrapper">
+              <img src="{% static 'tutorial/images/dj.jpg' %}" alt="" />
+            </div>
+          </div>
+
+          <p style="margin-bottom: 0.6em" class="green-text">BEGINNER</p>
+          <h3 style="margin-bottom: 1em">
+            Python Django for web development (Backend)
+          </h3>
+
+          <a class="green-text" href="/apply">Enroll Now</a>
+
+        
+        </div>
+
+        <!-- Row 4 -->
+        <div class="each-course">
+          <div class="stack-logo">
+            <div class="stack-logo-wrapper">
+              <img src="{% static 'tutorial/images/py.png' %}" alt="" />
+            </div>
+          </div>
+
+          <p style="margin-bottom: 0.6em" class="green-text">ALL LEVELS</p>
+          <h3 style="margin-bottom: 1em">Basic Computer Literacy</h3>
+
+          <a class="green-text" href="/apply">Enroll Now</a>
+
+        
+        </div>
+
+        <!-- Row 5 -->
+        <div class="each-course">
+          <div class="stack-logo">
+            <div class="stack-logo-wrapper">
+              <img src="{% static 'tutorial/images/ai.png' %}" alt="" />
+            </div>
+          </div>
+
+          <p style="margin-bottom: 0.6em" class="green-text">ALL LEVELS</p>
+          <h3 style="margin-bottom: 1em">AI and Machine Learning</h3>
+
+          <a class="green-text" href="/apply">Enroll Now</a>
+
+        
+        </div>
+
+        <!-- Row 6 -->
+        <div class="each-course">
+          <div class="stack-logo">
+            <div class="stack-logo-wrapper">
+              <img src="{% static 'tutorial/images/cyber.png' %}" alt="" />
+            </div>
+          </div>
+
+          <p style="margin-bottom: 0.6em" class="green-text">ALL LEVELS</p>
+          <h3 style="margin-bottom: 1em">Cybersecurity</h3>
+
+          <a class="green-text" href="/apply">Enroll Now</a>
+
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div id="instructor" class="instructor">
+    <h3 class="sub-heading center">
+      Meet Your <span class="green-text">Instructors</span>
+    </h3>
+    <div class="instructor-wrapper">
+      <div class="instructor-image">
+        <img src="{% static 'tutorial/images/instructor.jpg' %}" alt="" />
+      </div>
+      <div class="instructor-text">
+      <p style="margin-bottom: 1.5em;">My coding journey began in 2016, After years of honing my skills, I made the decision to transition to a new career path in 2020 during the COVID19 World-wide break. I'm now a full-time instructor and creator of educational content.</p>
+      <p>So if you're looking to learn how to code, or if you're struggling to understand some of those complex concepts, I'm here to help. Let's break down those barriers and get you on the path to success!</p>
+    </div>
+    </div>
+  </div> -->
+</div>
+
+{%endblock body%}

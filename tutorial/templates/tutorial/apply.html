@@ -1,0 +1,219 @@
+{% extends "./base.html" %} {% load static %} {% block body %}
+
+<div class="form">
+  <form action="" method="post">
+    {% csrf_token %}
+    <div class="form-field">
+      <label for="course">Course of interest <span class="required">*</span></label> 
+      <div class="radio">
+        <input value="Web Development" required type="radio" id="course" name="course" />
+        <span>Web Development</span>
+      </div>
+      <div class="radio">
+        <input value="Data Science" required type="radio" id="course" name="course" />
+        <span>Data Science</span>
+      </div>
+      <div class="radio">
+        <input value="Cybersecurity" required type="radio" id="course" name="course" />
+        <span>Cybersecurity</span>
+      </div>
+      <div class="radio">
+        <input value="Basic Computer Literacy" required type="radio" id="course" name="course" />
+        <span>Basic Computer Literacy</span>
+      </div>
+      <div class="radio">
+        <input value="AI & Machine Learning" required type="radio" id="course" name="course" />
+        <span>AI & Machine Learning </span>
+      </div>
+      <div class="radio">
+        <input value="Python Backend Programming (Django)" required type="radio" id="course" name="course" />
+        <span>Python Backend Programming (Django) </span>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="fullname">Name in full <span class="required">*</span></label>
+      <input required type="text" id="fullname" name="fullname" placeholder="John Doe" />
+    </div>
+    <div class="form-field">
+      <label for="email">Email <span class="required">*</span></label>
+      <input
+      required
+        type="text"
+        id="email"
+        name="email"
+        placeholder="example@gmail.com"
+      />
+    </div>
+    <div class="form-field">
+      <label for="gender">Gender <span class="required">*</span></label>
+      <div class="radio">
+        <input value="male" required type="radio" id="gender" name="gender" />
+        <span>Male</span>
+      </div>
+      <div class="radio">
+        <input value="female" required type="radio" id="gender" name="gender" />
+        <span>Female</span>
+      </div>
+    </div>
+    <div class="form-field">
+      <label for="dob">Date of birth <span class="required">*</span></label>
+      <input required type="date" id="dob" name="dob" />
+    </div>
+    <div class="form-field">
+      <label for="address">Residential Address <span class="required">*</span></label>
+      <input required type="text" id="address" name="address" />
+    </div>
+    <div class="form-field">
+      <label for="phone">Phone Number <span class="required">*</span></label>
+      <input required type="text" id="phone" name="phone" />
+    </div>
+
+    <div class="form-field">
+      <label for="education">Educational Background <span class="required">*</span></label>
+      <div class="radio">
+        <input value="Secondary School Leaver" required type="radio" id="education" name="education" />
+        <span>Secondary School Leaver</span>
+      </div>
+      <div class="radio">
+        <input value="Undergraduate" required type="radio" id="education" name="education" />
+        <span>Undergraduate</span>
+      </div>
+      <div class="radio">
+        <input value="Graduate" required type="radio" id="education" name="education" />
+        <span>Graduate</span>
+      </div>
+      <div class="radio">
+        <input value="Postgraduate" required type="radio" id="education" name="education" />
+        <span>Postgraduate</span>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="occupation">Occupation</label>
+      <div class="radio">
+        <input value="Student" type="radio" id="occupation" name="occupation" />
+        <span>Student</span>
+      </div>
+      <div class="radio">
+        <input value="Unemployed Graduate" type="radio" id="occupation" name="occupation" />
+        <span>Unemployed Graduate</span>
+      </div>
+      <div class="radio">
+        <input value="Self Employed" type="radio" id="occupation" name="occupation" />
+        <span>Self Employed</span>
+      </div>
+      <div class="radio">
+        <input value="Paid Employee (Private / Government)" type="radio" id="occupation" name="occupation" />
+        <span>Paid Employee (Private / Government)</span>
+      </div>
+      <div class="radio">
+        <input value="Academia" type="radio" id="occupation" name="occupation" />
+        <span>Academia</span>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="learning_mode">Mode of Learning <span class="required">*</span></label>
+      <div class="radio">
+        <input value="Physical Class (offline)" required type="radio" id="learning_mode" name="learning_mode" />
+        <span>Physical Class (offline)</span>
+      </div>
+      <div class="radio">
+        <input value="Virtual Class (online)" required type="radio" id="learning_mode" name="learning_mode" />
+        <span>Virtual Class (online)</span>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="sponsor">Sponsorship <span class="required">*</span></label>
+      <div class="radio">
+        <input value="Self" required type="radio" id="sponsor" name="sponsor" />
+        <span>Self</span>
+      </div>
+      <div class="radio">
+        <input value="Sponsor" required type="radio" id="sponsor" name="sponsor" />
+        <span>Sponsor</span>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="sponsor_relationship">Relationship with Sponsor</label>
+      <input
+        type="text"
+        id="sponsor_relationship"
+        name="sponsor_relationship"
+      />
+    </div>
+
+    <div class="form-field">
+      <label for="sponsor_phone">Sponsor Phone Number </label>
+      <input type="text" id="sponsor_phone" name="sponsor_phone" />
+    </div>
+
+    <div class="form-field">
+      <label for="how_did_you_hear_about_us">How did you hear about us? <span class="required">*</span></label>
+      <div class="radio">
+        <input value="Social Media" required type="radio" id="how_did_you_hear_about_us" name="how_did_you_hear_about_us" />
+        <span>Social Media (Facebook, Whatsapp, Instagram etc.)</span>
+      </div>
+      <div class="radio">
+        <input value="Search Engine" required type="radio" id="how_did_you_hear_about_us" name="how_did_you_hear_about_us" />
+        <span>Search Engine (Google, Bing)</span>
+      </div>
+      <div class="radio">
+        <input value="Friend or Family" required type="radio" id="how_did_you_hear_about_us" name="how_did_you_hear_about_us" />
+        <span>Friend or Family</span>
+      </div>
+      <div class="radio">
+        <input value="Online Advertisement" required type="radio" id="how_did_you_hear_about_us" name="how_did_you_hear_about_us" />
+        <span>Online Advertisement</span>
+      </div>
+      <div class="radio">
+        <input value="Email Newsletter" required type="radio" id="how_did_you_hear_about_us" name="how_did_you_hear_about_us" />
+        <span>Email Newsletter</span>
+      </div>
+      <div class="radio">
+        <input value="Tech Blog or Website" required type="radio" id="how_did_you_hear_about_us" name="how_did_you_hear_about_us" />
+        <span>Tech Blog or Website</span>
+      </div>
+      <div class="radio">
+        <input value="Flyer, Poster or Banner" required type="radio" id="how_did_you_hear_about_us" name="how_did_you_hear_about_us" />
+        <span>Flyer, Poster or Banner</span>
+      </div>
+      <div class="radio">
+        <input value="Community Event or Workshop" required type="radio" id="how_did_you_hear_about_us" name="how_did_you_hear_about_us" />
+        <span>Community Event or Workshop</span>
+      </div>
+      <div class="radio">
+        <input value="Other" required type="radio" id="how_did_you_hear_about_us" name="how_did_you_hear_about_us" />
+        <span>Other</span>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="">Terms and condition </label>
+      <span
+        >I understand that i will have to pay for this training upon arrival <span class="required">*</span>
+      </span>
+      <div class="radio">
+        <input required type="checkbox" id="" name="" />
+        <span>Yes</span>
+      </div>
+      <br>
+      <span
+        >By registering for the Summer Coding Classes 2024, you agree to abide by Mushak Tech Ventures' rules and regulations. You also consent to receive communication related to the program
+      </span>
+      
+      <div class="radio">
+        <input required type="checkbox" id="" name="" />
+        <span>Agree</span>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <button>Submit</button>
+    </div>
+  </form>
+</div>
+{%endblock body%}

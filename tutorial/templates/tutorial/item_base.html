@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{title}}">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Learn web development, coding, coding tutorial">
+    <meta name="author" content="Mrtokx">
+    <!-- <link rel="shortcut icon" href="{% static 'tutorial/images/logo.png' %}" /> -->
+    <link rel="stylesheet" href="{% static 'tutorial/css/tutorial.css' %}" />
+
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <!-- NavBar Starts -->
+
+    <nav>
+      <div class="navbar">
+        <div class="navbar-wrapper">
+          <div class="brand">
+            <a href="/">
+            <!-- <img src="{% static 'tutorial/images/logo.png' %}" alt="" /> -->
+          </a>
+          </div>
+
+          <div class="options">
+            <div class="big-screen-options">
+              <a href="#what-you-learn">What you'll learn</a>
+              <a href="#overview">Overview</a>
+              <a href="#modules">Modules</a>
+              
+            </div>
+
+            <button class="small-screen-toggle" onclick="showNavdropdown()">
+              <img
+                src="{% static 'tutorial/images/menu.svg' %}"
+                height="100%"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="nav-dropdownID" class="nav-dropdown">
+        <div class="nav-dropdown-wrapper">
+          <a href="#what-you-learn">What you'll learn</a>
+          <a href="#overview">Overview</a>
+          <a href="#modules">Modules</a>
+          
+        </div>
+      </div>
+    </nav>
+
+    <!-- Navbar Ends -->
+
+    <!-- Banner -->
+    <div class="item_banner">
+      <div class="banner-wrapper">
+        <div class="banner-content">
+          <!-- <h3 class="green-text sub-heading">Smart Technology</h3> -->
+          <h2 class="heading">
+          {% block heading %}
+          
+            {% endblock heading %}
+          </h2>
+          <div class="course-logo">
+            {% block course_logo %} 
+            
+            {% endblock course_logo %}
+            
+          </div>
+          <p style="margin-bottom: 40px">
+            {% block short_descrip %}
+          
+            {% endblock short_descrip %}
+            
+          </p>
+
+          <div class="link-button">
+            <a href="https://wa.link/iu00ya">Start Learning</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Banner ends -->
+
+
+
+
+    {% block course_overview %}
+   
+    {% endblock course_overview %}
+    
+
+    <div  style="padding-top: 2em;" class="details white-text">
+        <div class="detail-item center">
+            <h2 class="sub-heading" style="margin: 0;">Duration</h2>
+            {% block duration %}
+           
+              {% endblock duration %}
+        </div>
+
+        <div class="detail-item center">
+            <h2 class="sub-heading" style="margin: 0;">Days</h2>
+            <p>Saturday: 10am - 12pm</p>
+            <p>Sunday: 3pm - 6pm</p>
+        </div>
+
+        <div class="detail-item center">
+            <h2 class="sub-heading" style="margin: 0;">Assets</h2>
+            <p>Downloadable resources</p>
+        </div>
+
+        <div class="detail-item center">
+          <h2 class="sub-heading" style="margin: 0;">Session</h2>
+          {% block session %}
+           
+            {% endblock session %}
+          
+      </div>
+    </div>
+
+    <div id="what-you-learn" class="what-you-learn">
+        <div class="what-you-learn-wrapper">
+            <h2 class="sub-heading green-text center" >What you'll learn</h2>
+            <ul>
+              {% block what_you_learn %} {% endblock what_you_learn %}
+                
+            </ul>
+            
+        </div>
+        
+
+        <div id="pricing" class="pricing center">
+          
+          {% block price %} 
+          
+          {% endblock price %}
+          <p class="">Hurry Up! Now</p>
+          <div style="margin-top: 20px;" class="link-button">
+            <a href="https://wa.link/iu00ya">Start Learning</a>
+          </div>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 0;" class="notify-me-container">
+      <div class="notify-me-container-wrapper white-text">
+        <h2 class="sub-heading" >Course Description</h2>
+        <p>
+          {% block course_description %} 
+          {% endblock course_description %}
+          
+        </p>
+      </div>
+    </div>
+
+    <div id="modules" class="course-outline">
+      <h2 class="sub-heading green-text center" >Course Modules</h2>
+            <ul class="">
+              {% block course_outline_list %} {% endblock course_outline_list %}
+                
+            </ul>
+    </div>
+
+    <footer>
+      <div class="footer">
+      <div class="footer-wrapper">
+<div class="brand">
+  <img src="{% static 'tutorial/images/logo.png' %}" alt="" />
+</div>
+<div class="text center white-text">
+&copy; 2023 Smart Technology Nigeria. All Rights Reserved 
+</div>
+<div class="social">
+
+</div>
+      </div>
+    </div>
+    </footer>
+
+    <script>
+      const showNavdropdown = () => {
+        var dropdownNav = document.getElementById("nav-dropdownID");
+        dropdownNav.classList.toggle("show-nav-dropdown");
+      };
+    </script>
+  </body>
+</html>

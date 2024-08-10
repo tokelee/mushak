@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{description}}" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Learn web development, coding, coding tutorial, {{description}}"
+    />
+    <title>{{title}}</title>
+    <meta name="author" content="{{description}}" />
+    <link rel="shortcut icon" href="{% static 'tutorial/images/logo.png' %}" />
+    <link rel="stylesheet" href="{% static 'tutorial/css/tutorial.css' %}" />
+
+    <title>Home Page</title>
+  </head>
+  <body>
+    <!-- NavBar Starts -->
+
+    <nav>
+      <div class="navbar">
+        <div class="navbar-wrapper">
+          <div class="brand green-text">
+            <a href="/">
+              <span>Mushak Tech Ventures</span>
+              <!-- <img src="{% static 'tutorial/images/logo.png' %}" alt="" /> -->
+            </a>
+          </div>
+
+          <div class="options">
+            <div class="big-screen-options">
+              <a href="/#courses">Courses</a>
+              <a href="/apply">Apply now</a>
+            </div>
+
+            <button class="small-screen-toggle" onclick="showNavdropdown()">
+              <img
+                src="{% static 'tutorial/images/menu.svg' %}"
+                height="100%"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="nav-dropdownID" class="nav-dropdown">
+        <div class="nav-dropdown-wrapper">
+          <a href="#courses">Courses</a>
+
+          <a href="/apply">Apply now</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="whatsapp">
+      <a href="https://wa.link/nf2ffn" target="_blank">
+        <img src="{% static 'tutorial/images/whatsapp.png' %}" alt="" />
+      </a>
+    </div>
+
+    <!-- Navbar Ends -->
+
+    {% block body %} {% endblock body %}
+    <footer>
+      <div class="footer">
+        <div class="footer-wrapper">
+          <!-- <div class="brand">
+            <img src="{% static 'tutorial/images/logo.png' %}" alt="" />
+          </div> -->
+          <div class="text center white-text">
+            <p>29, Ojutalayo Street, Logudu Benbo, Apata, Ibadan.</p>
+            <address>
+              Call us: <a href="tel:+2348151017391">+(234)8151017391</a> <br>
+              Email us: <a href="mailto:mushaktechventures@gmail.com">mushaktechventures@gmail.com</a>
+            </address>
+            &copy; 2024 Mushak Technology Ventures Nigeria. All Rights Reserved
+          </div>
+          <div class="social"></div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const showNavdropdown = () => {
+        var dropdownNav = document.getElementById("nav-dropdownID");
+        dropdownNav.classList.toggle("show-nav-dropdown");
+      };
+    </script>
+  </body>
+</html>

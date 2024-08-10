@@ -1,0 +1,93 @@
+{% extends "./item_base.html" %} {% load static %}
+
+<!-- Heading -->
+{% block heading %} <span class="white-text"> Frontend Web Development </span> {% endblock heading %} 
+
+<!-- Course Logo -->
+{% block course_logo %}
+<img src="{% static 'tutorial/images/front-end4.jpg' %}" alt="" />
+{% endblock course_logo %}
+
+
+   <!-- Short Course Description -->
+   {% block short_descrip %}
+   <span class="white-text"> A course that will help you gain a solid foundation in web design and equip you with skills to create your own website from scratch, ready to publish to the web. </span>
+   {% endblock short_descrip %}
+
+
+<!-- Course DUration -->
+   {% block course_overview %}
+   <!-- <div id="overview" class="course-overview">
+     <div class="course-overview-wrapper">
+       <h2 class="sub-heading center">Course overview</h2>
+       <video controls>
+           <source src="{% static 'tutorial/videos/vid.mp4' %}" type="video/mp4">
+       </video>
+     </div>
+   </div> -->
+   {% endblock course_overview %}
+
+<!-- Course DUrations -->
+{% block duration %}
+<p>3 weeks (9 days)</p>
+{% endblock duration %}
+
+<!-- Course Session -->
+{% block session %}
+<p>11 Mar - 16 Apr</p>
+{% endblock session %}
+
+<!-- What To Learn List -->
+{% block what_you_learn %}
+<li>The fundamentals of HTML</li>
+<li>The basics of CSS</li>
+<li>Advanced CSS</li>
+<li>How to create and manage responsive layouts using CSS grid and flexbox</li>
+<li>
+  How to use JavaScript to add dynamic and interactive functionality to your web
+  pages
+</li>
+<li>
+  How to manipulate the Document Object Model (DOM) with JavaScript to create
+  dynamic web pages
+</li>
+<li>
+  How to build different high quality website
+</li>
+<li>
+    Website Hosting and deployment
+  </li>
+{% endblock what_you_learn %}
+
+<!-- Pricing -->
+{% block price %}
+<h2 class="sub-heading green-text" >Limited Time Offer</h2>
+<h2 class="sub-heading black-text">&#8358;25,000.00</h2>
+<strike style="color: #1111114e">
+  <h2 style="color: #1111112f" class="sub-heading">&#8358;250,000.00</h2>
+</strike>
+{% endblock price %}
+
+<!-- Course Description -->
+{% block course_description %}  
+In this course, you'll gain a solid foundation in
+web design, starting from the basics of HTML tags and structure, and progressing
+to styling your pages with CSS. You'll learn how to create responsive designs
+that adapt to various screen sizes and devices. By the end of the course, you'll have the skills to create
+your own website from scratch, ready to publish to the web. 
+{% endblock course_description %}
+
+<!-- Course Module -->
+{% block course_outline_list %}
+<li>Introduction to the web and how it works</li>
+<li>Setting up our coding environment</li>
+<li>HTML Basics</li>
+<li>CSS Basics</li>
+<li>Designing a Podcast Website</li>
+<li>Getting started with Media Queries</li>
+<li>Responsive design for our Podcast Website</li>
+<li>Introduction to JavaScript</li>
+<li>Basic syntax and data types</li>
+<li>Functions and control structures</li>
+<li>CSS frameworks (Bootstrap and Bulma)</li>
+ {% endblock course_outline_list %}
