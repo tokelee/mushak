@@ -47,6 +47,13 @@ def thank_you(request):
                       {'description': description, 'title': title})
     return response
 
+def timetable(request):
+    description = "Mushak Tech Ventures professional courses - Time table"
+    title = "Mushak Tech Ventures professional courses - Time table"
+    response = render(request, 'tutorial/timetable.html',
+                      {'description': description, 'title': title})
+    return response
+
 
 def frontend(request):
     description = "Discover a new level of web development and programming with Mushak Tech Ventures professional courses. Our project-based approach provides hands-on experience to solidify complex concepts, with explanations delivered in an easy-to-understand manner"

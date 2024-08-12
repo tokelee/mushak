@@ -412,7 +412,7 @@ nav{
 
 .whatsapp{
     position: fixed;
-    bottom: 10vh;
+    bottom: 7vh;
     right: 40px;
     height: 70px;
     width: 70px;
@@ -492,6 +492,7 @@ label{
     box-shadow: 0 0 20px rgb(204, 204, 204);
     @media only screen and (max-width: 600px) {
         width: 100%;
+        overflow-x: scroll;
     }
 }
 
@@ -563,3 +564,26 @@ address a{
 @media only screen and (max-width: 300px) {
    
 }
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  th{
+    background-color: var(--green);
+    color: var(--alternate-white);
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
